@@ -1,0 +1,4 @@
+interface:
+  display_name: "Telegram 自动发布 + X 草稿"
+  short_description: "Telegram 自动发送与 Typefully X 草稿"
+  default_prompt: "Use $telegram-auto-publish with output/quark_links.typefully.xlsx to prepare the first video as a leading clip no longer than 10 minutes and strictly under 50,000,000 bytes, send Telegram through Bot API, and upload the same media and X copy to Typefully as a draft only without publishing or scheduling it."

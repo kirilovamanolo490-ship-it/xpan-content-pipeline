@@ -1,0 +1,7 @@
+interface:
+  display_name: "飞书每日收录"
+  short_description: "每天抓取飞书并增量更新收录资料池"
+  default_prompt: "Use $feishu-intake-daily to run or check the daily Feishu intake workflow."
+
+policy:
+  allow_implicit_invocation: true

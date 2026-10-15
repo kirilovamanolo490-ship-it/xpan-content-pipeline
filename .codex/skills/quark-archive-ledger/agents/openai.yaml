@@ -1,0 +1,7 @@
+interface:
+  display_name: "夸克归档台账"
+  short_description: "转存已归档资料并写入新链接、大小和路径"
+  default_prompt: "Use $quark-archive-ledger to preview or run the approved Quark archive workflow."
+
+policy:
+  allow_implicit_invocation: true

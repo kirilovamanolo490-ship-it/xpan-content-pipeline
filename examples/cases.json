@@ -1,0 +1,76 @@
+{
+  "notice": "Manually selected and redacted evidence summary. Raw ledger, account IDs, share links, receipts, and source packages are intentionally private.",
+  "cases": [
+    {
+      "title": "公益解析",
+      "image": "assets/link-parser.png",
+      "image_sha256": "f83da0e4e5603ed80925e5146446e2f19dd583d84d0de4506a3ae2b4c3bbc15c",
+      "image_dimensions": [
+        1672,
+        941
+      ],
+      "image_origin": "Existing project-generated conceptual cover; original bytes preserved",
+      "checked_on": "2026-10-15",
+      "evidence_scope": "Historical local ledger and saved receipts, not a live platform status query",
+      "quark_share": "SHARE_VALIDATED",
+      "telegram": "sent",
+      "typefully_evidence": "draft_readback",
+      "x_live_publication_verified": false,
+      "evidence_files": [
+        "telegram-project-details.json",
+        "imagegen-review.json",
+        "publish-qa.json",
+        "telegram-send-result.json",
+        "typefully-draft-readback.json"
+      ]
+    },
+    {
+      "title": "Yovoice 配音工具",
+      "image": "assets/yovoice.png",
+      "image_sha256": "0510bb3f853e005791283c1c756a6f0365826318f037970c4dd97388d3793cc2",
+      "image_dimensions": [
+        1672,
+        941
+      ],
+      "image_origin": "Existing project-generated conceptual cover; original bytes preserved",
+      "checked_on": "2026-10-15",
+      "evidence_scope": "Historical local ledger and saved receipts, not a live platform status query",
+      "quark_share": "SHARE_VALIDATED",
+      "telegram": "sent",
+      "typefully_evidence": "draft_recorded_media_ready",
+      "x_live_publication_verified": false,
+      "evidence_files": [
+        "telegram-project-details.json",
+        "imagegen-review.json",
+        "copy-review.json",
+        "telegram-quality.json",
+        "typefully-upload-state.json"
+      ]
+    },
+    {
+      "title": "AI 创作实践",
+      "image": "assets/ai-creation.png",
+      "image_sha256": "dade47b87e5fc99c3a3c6a397baaa9b6921dedda3dbe480b0f9787b984bf4fbe",
+      "image_dimensions": [
+        1672,
+        941
+      ],
+      "image_origin": "Existing project-generated conceptual cover; original bytes preserved",
+      "checked_on": "2026-10-15",
+      "evidence_scope": "Historical local ledger and saved receipts, not a live platform status query",
+      "quark_share": "SHARE_VALIDATED",
+      "telegram": "sent",
+      "typefully_evidence": "scheduled_readback",
+      "x_live_publication_verified": false,
+      "scheduled_at_shanghai": "2026-10-12T19:45:00+08:00",
+      "unrelated_cells_or_styles_changed": false,
+      "evidence_files": [
+        "telegram-project-details.json",
+        "imagegen-review.json",
+        "copy-review.json",
+        "telegram-quality.json",
+        "typefully-schedule-20261012.json"
+      ]
+    }
+  ]
+}

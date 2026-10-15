@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xpan-auto"
+version = "0.1.0"
+description = "Extract Quark links from Feishu sources and export processed results to Excel"
+requires-python = ">=3.11"
+dependencies = [
+    "openpyxl>=3.1,<4",
+    "Pillow>=10,<12",
+    "Telethon>=1.36,<2",
+    "cryptg>=0.6,<1",
+    "hachoir>=3.3,<4",
+    "requests>=2.32,<3",
+    "natsort>=8,<9",
+    "treelib>=1.7,<2",
+]
+
+[project.optional-dependencies]
+browser = [
+    "playwright>=1.50,<2",
+]
+documents = ["pypdf>=5,<7", "xlrd>=2,<3"]
+
+[project.scripts]
+xpan-auto = "xpan_auto.cli:main"
+xpan-auto-login = "xpan_auto.quark_auth:main"
+typefully-auto = "xpan_auto.typefully_cli:main"
+xpan-publish = "xpan_auto.publish_pipeline:main"
+xpan-knowledge = "xpan_auto.knowledge_flow:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

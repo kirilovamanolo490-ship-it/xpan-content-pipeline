@@ -1,0 +1,42 @@
+# Credentials and private runtime data
+.env
+.env.*
+!.env.example
+config/
+knowledge/
+output/
+outputs/
+profiles/
+*.sqlite*
+*.db
+*.db-*
+*.session*
+*.xlsx
+*.xls
+*.pem
+*.key
+*cookie*.txt
+# Keep only the audited downloader source under work/
+work/*
+!work/quark-auto-save/
+work/quark-auto-save/*
+!work/quark-auto-save/README.md
+!work/quark-auto-save/LICENSE
+!work/quark-auto-save/requirements.txt
+!work/quark-auto-save/quark_auto_save.py
+!work/quark-auto-save/download_first_video.py
+# Local dependencies and scratch files
+.venv/
+.venv.*
+.tools/
+node_modules/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.DS_Store
+.firecrawl/
+.codex/tmp/
+tmp/
+dist/
+build/
