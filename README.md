@@ -21,20 +21,25 @@ Python · SQLite · Excel · Quark · Telegram Bot API · Typefully · Agent Ski
 ## 完整链路
 
 ```mermaid
-flowchart TD
-    A[飞书资料源] -->|增量抓取 / share_id 去重| B[本地收录池 Markdown + SQLite]
-    B -->|人工筛选| C[本地归档池]
-    C -->|自动建立编号目录| D[转存至自己的夸克网盘]
-    D --> E[创建新分享链接]
-    E -->|匿名访问验证| F[唯一 Excel 主表]
-    F --> G[递归读取目录 / 选择首视频或图片]
-    G --> H[下载与媒体质检 / 整理发布文案]
-    H -->|源事实与文案审阅通过| I[Telegram Bot API 发送]
-    I --> J[Typefully MCP 上传媒体并创建 X 草稿]
-    J -->|已有排期授权| K[浏览器确认 X 定时发布]
-    K --> L[回读同一草稿 / 核对时间与状态]
-    L --> M[回写主表 / 保存恢复记录]
-    M -. 下次只继续未完成步骤 .-> F
+flowchart TB
+    subgraph intake["1 · 收录到本地"]
+        direction LR
+        A[飞书资料源] --> B["增量收录与去重<br/>Markdown + SQLite"] --> C["人工筛选<br/>本地归档池"]
+    end
+    subgraph cloud["2 · 夸克转存与建链"]
+        direction LR
+        D[自动转存至编号目录] --> E[创建并验证新分享链接] --> F[写入唯一主表]
+    end
+    subgraph publish["3 · 准备并发布"]
+        direction LR
+        G[媒体准备与文案审阅] --> H[Telegram 发送] --> I[Typefully 建稿与授权排期]
+    end
+    subgraph state["4 · 回读与恢复"]
+        direction LR
+        J[回读同一草稿与时间] --> K[按行回写状态] --> L[失败续跑 · 成功不重发]
+    end
+    intake --> cloud --> publish --> state
+    state -. 继续未完成步骤 .-> publish
 ```
 
 | 环节 | 做什么 | 留下什么 | 下一步如何接上 |
